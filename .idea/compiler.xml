@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bar-recommender" />
+        <module name="bar" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="bar-recommender" target="1.5" />
+      <module name="bar" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
