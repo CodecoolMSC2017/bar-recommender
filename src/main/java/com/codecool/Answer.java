@@ -18,4 +18,5 @@ public class Answer {
     public void addValue(Value value){
         answers.add(value);
     }
+
 }
