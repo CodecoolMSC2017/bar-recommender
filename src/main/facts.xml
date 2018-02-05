@@ -15,7 +15,7 @@
         <Evals>
             <Eval id="hair">true</Eval>
             <Eval id="shirt">true</Eval>
-            <Eval id="shit">flase</Eval>
+            <Eval id="shit">false</Eval>
             <Eval id="cat">true</Eval>
             <Eval id="shoes">true</Eval>
         </Evals>
