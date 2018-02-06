@@ -9,7 +9,6 @@ public class Main {
         System.out.println(esProvider.getFactRepository().list);
         Iterator factIterator = esProvider.getFactRepository().getIterator();
         while (factIterator.hasNext()) {
-            System.out.println("mükszik");
             fact = (Fact) factIterator.next();
             System.out.println(fact.getDesription());
         }
