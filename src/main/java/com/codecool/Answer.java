@@ -1,22 +1,23 @@
 package com.codecool;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Answer {
-    List<Value> answers;
+    List<Value> values = new ArrayList<Value>();
 
     public boolean evaulateAnswerByInput(String input){ // incomplete!
-        if(input.toLowerCase().equals("true")){
-            return true;
+        for (int i = 0; i < values.size(); i++){
+            if (values.get(i).getInputPattern().contains(input)){
+                return true;
+            }
         }
-        else{
-            return false;
-        }
+        return false;
 
     }
 
     public void addValue(Value value){
-        answers.add(value);
+        values.add(value);
     }
 
 }
