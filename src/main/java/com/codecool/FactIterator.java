@@ -1,15 +1,11 @@
 package com.codecool;
 
-
-import org.w3c.dom.*;
-
-
 import java.util.Iterator;
 import java.util.List;
 
 public class FactIterator implements Iterator {
 
-    private int i;
+    private int i = 0;
     private List<Fact> list;
 
     public FactIterator(List<Fact> list) {
@@ -17,7 +13,7 @@ public class FactIterator implements Iterator {
     }
 
     public boolean hasNext() {
-        if (i + 1 < list.size()) {
+        if (i < list.size()) {
             return true;
         }
         return false;
