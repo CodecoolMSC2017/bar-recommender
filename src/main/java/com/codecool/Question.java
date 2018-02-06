@@ -10,7 +10,6 @@ public class Question {
         this.id = id;
         this.question = question;
         this.answer = answer;
-        System.out.println(question);
 
     }
 
