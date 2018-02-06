@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a3a95cd5-d092-43c9-9dbf-986b53da1d35" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/Answer.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/Answer.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/MultipleValues.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/MultipleValues.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/SingleValue.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/SingleValue.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/Value.java" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/Value.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,7 +42,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Answer.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Answer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Answer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
@@ -72,15 +68,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultipleValues.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MultipleValues.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MultipleValues.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#138#139#0" expanded="true" />
                 <element signature="e#166#167#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ESProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/ESProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -411,14 +417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/ESProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Value.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -428,17 +426,6 @@
             <element signature="e#170#171#0" expanded="true" />
             <element signature="e#236#237#0" expanded="true" />
             <element signature="e#265#266#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Answer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#378#379#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -457,10 +444,29 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/MultipleValues.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#138#139#0" expanded="true" />
             <element signature="e#166#167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/ESProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/codecool/Answer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
           </folding>
         </state>
       </provider>
