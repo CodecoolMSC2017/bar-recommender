@@ -5,6 +5,7 @@ public class ESProvider {
     private FactRepository factRepository;
 
     public ESProvider(FactParser factParser, RuleParser ruleParser) {
+        factParser.loadXmlDocument("./src/main/facts.xml");
         this.factRepository = factParser.getFactRepository();
     }
 
@@ -18,5 +19,9 @@ public class ESProvider {
 
     public String evaluate() {
         return null;
+    }
+
+    public FactRepository getFactRepository() {
+        return factRepository;
     }
 }

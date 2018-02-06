@@ -3,41 +3,41 @@
     <Fact id="osztriga">
         <Description value="Kék Osztriga"/>
         <Evals>
-            <Eval id="hair">true</Eval>
-            <Eval id="shirt">true</Eval>
-            <Eval id="shit">true</Eval>
-            <Eval id="cat">true</Eval>
-            <Eval id="shoes">true</Eval>
+            <hair>true</hair>
+            <shirt>true</shirt>
+            <shit>true</shit>
+            <cat>true</cat>
+            <shoes>true</shoes>
         </Evals>
     </Fact>
     <Fact id="kapu">
         <Description value="Kapuvári Buzibár"/>
         <Evals>
-            <Eval id="hair">true</Eval>
-            <Eval id="shirt">true</Eval>
-            <Eval id="shit">false</Eval>
-            <Eval id="cat">true</Eval>
-            <Eval id="shoes">true</Eval>
+            <hair>true</hair>
+            <shirt>true</shirt>
+            <shit>false</shit>
+            <cat>true</cat>
+            <shoes>true</shoes>
         </Evals>
     </Fact>
     <Fact id="magnum">
         <Description value="Magnum Bár"/>
         <Evals>
-            <Eval id="hair">true</Eval>
-            <Eval id="shirt">false</Eval>
-            <Eval id="shit">true</Eval>
-            <Eval id="cat">false</Eval>
-            <Eval id="shoes">true</Eval>
+            <hair>true</hair>
+            <shirt>false</shirt>
+            <shit>true</shit>
+            <cat>false</cat>
+            <shoes>true</shoes>
         </Evals>
     </Fact>
     <Fact id="buza">
         <Description value="Búza téri Drink Bár"/>
         <Evals>
-            <Eval id="hair">false</Eval>
-            <Eval id="shirt">false</Eval>
-            <Eval id="shit">false</Eval>
-            <Eval id="cat">false</Eval>
-            <Eval id="shoes">false</Eval>
+            <hair>false</hair>
+            <shirt>false</shirt>
+            <shit>false</shit>
+            <cat>false</cat>
+            <shoes>false</shoes>
         </Evals>
     </Fact>
 </Facts>
