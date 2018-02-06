@@ -24,7 +24,9 @@ public class FactIterator implements Iterator {
     }
 
     public Fact next() {
-        return list.get(i++);
+        Fact fact = list.get(i);
+        i++;
+        return fact;
     }
 
     public void remove() {
