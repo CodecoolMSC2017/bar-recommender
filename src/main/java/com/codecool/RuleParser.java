@@ -2,7 +2,6 @@ package com.codecool;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -18,32 +17,30 @@ public class RuleParser extends XMLParser {
     }
 
 
-    public void loadXmlDocument(String xmlPath){
+    public void loadXmlDocument(String xmlPath) {
         Document doc = null;
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dbBuilder = dbFactory.newDocumentBuilder();
             doc = dbBuilder.parse(new File(xmlPath));
-        }
-        catch (Exception o) {
+        } catch (Exception o) {
             o.printStackTrace();
         }
         String id;
         String question;
         Question quest;
         Answer answer = new Answer();
-        Value value = new SingleValue("true");
-        answer.addValue(value);
+        answer.addValue(new SingleValue("true"));
         answer.addValue(new SingleValue("false"));
         NodeList nodes = doc.getElementsByTagName("Rule");
-        for (int i = 0; i < nodes.getLength() ; i++) {
+        for (int i = 0; i < nodes.getLength(); i++) {
             Element element;
-            element =  (Element) nodes.item(i);
+            element = (Element) nodes.item(i);
             id = element.getAttribute("id");
             NodeList nodeList = element.getChildNodes();
             question = nodeList.item(1).getTextContent();
 
-            quest = new Question(id, question, answer );
+            quest = new Question(id, question, answer);
             repo.addQuestion(quest);
         }
     }

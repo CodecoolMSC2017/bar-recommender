@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Answer {
-    List<Value> values = new ArrayList<Value>();
+    private List<Value> values = new ArrayList<Value>();
 
-    public boolean evaluateAnswerByInput(String input){ // incomplete!
-        for (int i = 0; i < values.size(); i++){
-            if (values.get(i).getInputPattern().contains(input)){
-                return true;
-            }
+    public boolean evaluateAnswerByInput(String input) throws Exception {
+        input = input.toLowerCase();
+        if (input.equals("yes")) {
+            return true;
+        } else if (input.equals("no")) {
+            return false;
         }
-        return false;
-
+        throw new Exception("Wrong input");
     }
 
-    public void addValue(Value value){
+    public void addValue(Value value) {
         values.add(value);
     }
 

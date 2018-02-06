@@ -10,9 +10,10 @@ abstract class Value {
         this.valuesList = values;
     }
 
-    public Value(){}
+    public Value() {
+    }
 
-    public List<String> getInputPattern(){
+    public List<String> getInputPattern() {
         return valuesList;
     }
 

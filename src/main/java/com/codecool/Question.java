@@ -6,11 +6,12 @@ public class Question {
     private String question;
     private Answer answer;
 
-
     public Question(String id, String question, Answer answer) {
         this.id = id;
         this.question = question;
         this.answer = answer;
+        System.out.println(question);
+
     }
 
     public String getId() {
@@ -26,7 +27,7 @@ public class Question {
         return answer;
     }
 
-    public boolean getEvaulatedAnswer(String input) {
+    public boolean getEvaulatedAnswer(String input) throws Exception {
         return answer.evaluateAnswerByInput(input);
     }
 
