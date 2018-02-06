@@ -3,13 +3,13 @@ package com.codecool;
 public class Question {
 
     private String id;
-    private String questions;
+    private String question;
     private Answer answer;
 
 
-    public Question(String id, String questions, Answer answer) {
+    public Question(String id, String question, Answer answer) {
         this.id = id;
-        this.questions = questions;
+        this.question = question;
         this.answer = answer;
     }
 
@@ -18,8 +18,8 @@ public class Question {
     }
 
 
-    public String getQuestions() {
-        return questions;
+    public String getQuestion() {
+        return question;
     }
 
     public Answer getAnswer() {

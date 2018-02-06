@@ -21,6 +21,7 @@ public class QuestionIterator implements Iterator {
 
     public Question next() {
         Question question = list.get(i);
+        i++;
         return question;
     }
 

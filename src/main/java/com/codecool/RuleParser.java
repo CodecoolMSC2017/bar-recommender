@@ -11,7 +11,7 @@ import java.io.File;
 
 
 public class RuleParser extends XMLParser {
-    private RuleRepository repo;
+    private RuleRepository repo = new RuleRepository();
 
     public RuleRepository getRuleRepository() {
         return repo;
@@ -39,9 +39,9 @@ public class RuleParser extends XMLParser {
         for (int i = 0; i < nodes.getLength() ; i++) {
             Element element;
             element =  (Element) nodes.item(i);
-            Node node = element.getFirstChild();
             id = element.getAttribute("id");
-            question = node.getTextContent();
+            NodeList nodeList = element.getChildNodes();
+            question = nodeList.item(1).getTextContent();
 
             quest = new Question(id, question, answer );
             repo.addQuestion(quest);
