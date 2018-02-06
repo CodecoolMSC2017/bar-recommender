@@ -35,7 +35,6 @@ public class FactParser extends XMLParser {
         for (int i = 0; i < nodeList.getLength(); i++) {
             Element element = (Element) nodeList.item(i);
             id = element.getAttribute("id");
-            //System.out.println(element.getNodeName());
             NodeList childs = element.getChildNodes();
 
             Element desc = (Element) childs.item(1);

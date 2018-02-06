@@ -7,7 +7,7 @@ public class Question {
     Answer answer;
 
 
-    public Question(String id, String questions, Answer answer){
+    public Question(String id, String questions, Answer answer) {
         this.id = id;
         this.questions = questions;
         this.answer = answer;
@@ -26,9 +26,9 @@ public class Question {
         return answer;
     }
 
-    public boolean getEvaulatedAnswer(String input){
+    public boolean getEvaulatedAnswer(String input) {
         boolean response = answer.evaulateAnswerByInput(input);
         return response;
     }
-    
+
 }
