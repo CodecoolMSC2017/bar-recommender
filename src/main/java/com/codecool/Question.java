@@ -2,9 +2,9 @@ package com.codecool;
 
 public class Question {
 
-    String id;
-    String questions;
-    Answer answer;
+    private String id;
+    private String questions;
+    private Answer answer;
 
 
     public Question(String id, String questions, Answer answer) {
@@ -27,8 +27,7 @@ public class Question {
     }
 
     public boolean getEvaulatedAnswer(String input) {
-        boolean response = answer.evaulateAnswerByInput(input);
-        return response;
+        return answer.evaluateAnswerByInput(input);
     }
 
 }
