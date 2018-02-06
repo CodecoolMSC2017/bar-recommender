@@ -14,5 +14,6 @@ public class Main {
             question = (Question) questionIterator.next();
             answers.add(esProvider.getAnswerByQuestion(question.getId()));
         }
+        esProvider.collectAnswers(answers);
     }
 }

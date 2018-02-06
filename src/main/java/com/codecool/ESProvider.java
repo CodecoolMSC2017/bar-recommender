@@ -1,5 +1,7 @@
 package com.codecool;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -7,6 +9,7 @@ public class ESProvider {
 
     private FactRepository factRepository;
     private RuleRepository ruleRepository;
+    private HashMap<String, Boolean> answers = new HashMap<String, Boolean>();
 
     public ESProvider(FactParser factParser, RuleParser ruleParser) {
         factParser.loadXmlDocument("./src/main/facts.xml");
@@ -15,8 +18,14 @@ public class ESProvider {
         this.ruleRepository = ruleParser.getRuleRepository();
     }
 
-    public void collectAnswers() {
-
+    public void collectAnswers(ArrayList<Boolean> answers) {
+        Iterator<Question> questionIterator = ruleRepository.getIterator();
+        int counter = 0;
+        while (questionIterator.hasNext()) {
+            Question question = questionIterator.next();
+            this.answers.put(question.getId(), answers.get(counter));
+            counter++;
+        }
     }
 
     public boolean getAnswerByQuestion(String questionId) {
