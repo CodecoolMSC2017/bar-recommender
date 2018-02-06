@@ -13,14 +13,15 @@ public class QuestionIterator implements Iterator {
     }
 
     public boolean hasNext() {
-        if (i + 1 < list.size()) {
+        if (i < list.size()) {
             return true;
         }
         return false;
     }
 
     public Question next() {
-        return list.get(i++);
+        Question question = list.get(i);
+        return question;
     }
 
     public void remove() {
