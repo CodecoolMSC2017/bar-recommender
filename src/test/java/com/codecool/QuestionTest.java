@@ -37,8 +37,7 @@ class QuestionTest {
         try {
             String yes = "yes";
             assertTrue(testQuestion.getEvaulatedAnswer(yes));
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             assertEquals("no excpetion expected, but got one", e.getMessage());
         }
     }

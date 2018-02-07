@@ -13,9 +13,8 @@ class AnswerTest {
         try {
             String yes = "yes";
             assertTrue(test.evaluateAnswerByInput(yes));
-        }
-        catch (Exception e){
-            assertEquals("No exception expected, but get one",e.getMessage());
+        } catch (Exception e) {
+            assertEquals("No exception expected, but get one", e.getMessage());
         }
     }
 
@@ -24,18 +23,17 @@ class AnswerTest {
         try {
             String no = "no";
             assertFalse(test.evaluateAnswerByInput(no));
-        }
-        catch (Exception e){
-            assertEquals("No exception expected, but get one",e.getMessage());
+        } catch (Exception e) {
+            assertEquals("No exception expected, but get one", e.getMessage());
         }
     }
+
     @Test
     void checkIfAnswerWrong() {
         try {
             String exception = "asda";
             test.evaluateAnswerByInput(exception);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             assertEquals(e.getMessage(), "Wrong input");
         }
     }
