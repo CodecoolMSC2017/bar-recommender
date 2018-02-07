@@ -79,18 +79,18 @@ public class ESProvider {
         Iterator<Question> iterator = ruleRepository.getIterator();
         Iterator<Fact> factIt = factRepository.getIterator();
         int count = 0;
-         while(factIt.hasNext()) {
-             count = 0;
-             Fact fact = factIt.next();
-             for (String id : answers.keySet()) {
-                if (fact.getValueById(id) == answers.get(id)){
-                    count+=1;
+        while (factIt.hasNext()) {
+            count = 0;
+            Fact fact = factIt.next();
+            for (String id : answers.keySet()) {
+                if (fact.getValueById(id) == answers.get(id)) {
+                    count += 1;
                 }
             }
             result.put(fact.getDesription(), count);
 
 
         }
-           return result;
+        return result;
     }
 }
