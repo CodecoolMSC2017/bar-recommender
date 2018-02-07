@@ -6,14 +6,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AnswerTest {
-    Answer test = new Answer();
-    String yes = "yes";
-    String no = "no";
-    String exception = "asda";
+    private Answer test = new Answer();
 
     @Test
     void checkIfAnswerYes() {
         try {
+            String yes = "yes";
             assertTrue(test.evaluateAnswerByInput(yes));
         }
         catch (Exception e){
@@ -24,6 +22,7 @@ class AnswerTest {
     @Test
     void checkIfAnswerNo() {
         try {
+            String no = "no";
             assertFalse(test.evaluateAnswerByInput(no));
         }
         catch (Exception e){
@@ -33,6 +32,7 @@ class AnswerTest {
     @Test
     void checkIfAnswerWrong() {
         try {
+            String exception = "asda";
             test.evaluateAnswerByInput(exception);
         }
         catch (Exception e){

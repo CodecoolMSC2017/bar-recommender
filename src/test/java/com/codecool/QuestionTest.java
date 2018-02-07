@@ -6,16 +6,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class QuestionTest {
-    Answer answer = new Answer();
-    String question;
-    String id;
-    String yes = "yes";
-    Question testQuestion;
+    private Answer answer = new Answer();
+    private Question testQuestion;
 
     @BeforeEach
     void setUp() {
-        id = "newID";
-        question = "isThereID?";
+        String id = "newID";
+        String question = "isThereID?";
         answer.addValue(new SingleValue("newValue"));
         testQuestion = new Question(id, question, answer);
     }
@@ -38,6 +35,7 @@ class QuestionTest {
     @Test
     void testGetEvaulatedAnswer() {
         try {
+            String yes = "yes";
             assertTrue(testQuestion.getEvaulatedAnswer(yes));
         }
         catch (Exception e){
