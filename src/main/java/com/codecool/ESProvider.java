@@ -19,15 +19,11 @@ public class ESProvider {
     }
 
     public void collectAnswers() {
-        ArrayList<Boolean> answers = new ArrayList<Boolean>();
         Question question;
         Iterator<Question> questionIterator = ruleRepository.getIterator();
-        int counter = 0;
         while (questionIterator.hasNext()) {
             question = questionIterator.next();
-            answers.add(getAnswerByQuestion(question.getId()));
-            this.answers.put(question.getId(), answers.get(counter));
-            counter++;
+            answers.put(question.getId(), getAnswerByQuestion(question.getId()));
         }
     }
 
