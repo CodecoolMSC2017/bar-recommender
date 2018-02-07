@@ -22,11 +22,10 @@ public class ESProvider {
 
     public void collectAnswers() {
         Iterator<Question> questionIterator = ruleRepository.getIterator();
-        int counter = 0;
+        Question question;
         while (questionIterator.hasNext()) {
-            Question question = questionIterator.next();
-            this.answers.put(question.getId(), answers.get(counter));
-            counter++;
+            question = questionIterator.next();
+            this.answers.put(question.getId(), getAnswerByQuestion(question.getId()));
         }
     }
 
