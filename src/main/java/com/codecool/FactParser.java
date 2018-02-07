@@ -8,6 +8,7 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.util.HashMap;
 
 public class FactParser extends XMLParser {
 
@@ -18,7 +19,7 @@ public class FactParser extends XMLParser {
     }
 
     void loadXmlDocument(String xmlPath) {
-        DocumentBuilder DBuilder = null;
+        DocumentBuilder DBuilder;
         Document doc = null;
         try {
             DBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
@@ -30,11 +31,6 @@ public class FactParser extends XMLParser {
         Fact fact;
         String id;
         String description;
-        boolean hair;
-        boolean shirt;
-        boolean shit;
-        boolean cat;
-        boolean shoes;
 
         for (int i = 0; i < nodeList.getLength(); i++) {
             Element element = (Element) nodeList.item(i);
@@ -45,18 +41,19 @@ public class FactParser extends XMLParser {
             description = desc.getAttribute("value");
             Element evals = (Element) childs.item(3);
 
-            hair = Boolean.parseBoolean(evals.getElementsByTagName("hair").item(0).getTextContent());
-            shirt = Boolean.parseBoolean(evals.getElementsByTagName("shirt").item(0).getTextContent());
-            shit = Boolean.parseBoolean(evals.getElementsByTagName("shit").item(0).getTextContent());
-            cat = Boolean.parseBoolean(evals.getElementsByTagName("cat").item(0).getTextContent());
-            shoes = Boolean.parseBoolean(evals.getElementsByTagName("shoes").item(0).getTextContent());
+            NodeList conditions = evals.getChildNodes();
+            HashMap<String, Boolean> values = new HashMap<String, Boolean>();
+            int counter = 1;
+            while (counter < conditions.getLength()) {
+                Node item = conditions.item(counter);
+                values.put(item.getNodeName(), Boolean.parseBoolean(item.getTextContent()));
+                counter += 2;
+            }
 
             fact = new Fact(id, description);
-            fact.setFactValueById("hair", hair);
-            fact.setFactValueById("shirt", shirt);
-            fact.setFactValueById("shit", shit);
-            fact.setFactValueById("cat", cat);
-            fact.setFactValueById("shoes", shoes);
+            for (String itemName : values.keySet()) {
+                fact.setFactValueById(itemName, values.get(itemName));
+            }
             repo.addFact(fact);
         }
 
