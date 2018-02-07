@@ -1,11 +1,9 @@
 package com.codecool;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-
 public class Main {
     public static void main(String[] args){
-        ESProvider esProvider = new ESProvider(new FactParser(), new RuleParser());
+        String rootDir = args[0];
+        ESProvider esProvider = new ESProvider(new FactParser( rootDir + "/facts.xml"), new RuleParser(rootDir + "/rules.xml"));
 
         esProvider.collectAnswers();
         System.out.println(esProvider.evaluate());

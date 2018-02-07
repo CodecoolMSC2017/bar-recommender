@@ -12,6 +12,11 @@ import java.io.File;
 public class RuleParser extends XMLParser {
     private RuleRepository repo = new RuleRepository();
 
+
+    public RuleParser(String xmlPath) {
+        loadXmlDocument(xmlPath);
+    }
+
     public RuleRepository getRuleRepository() {
         return repo;
     }
