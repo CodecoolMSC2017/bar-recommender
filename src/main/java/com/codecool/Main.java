@@ -6,6 +6,6 @@ public class Main {
         ESProvider esProvider = new ESProvider(new FactParser( rootDir + "/facts.xml"), new RuleParser(rootDir + "/rules.xml"));
 
         esProvider.collectAnswers();
-        System.out.println(esProvider.evaluate());
+        System.out.println("\nBar(s) we recommend you to visit:\n" + esProvider.evaluate());
     }
 }
