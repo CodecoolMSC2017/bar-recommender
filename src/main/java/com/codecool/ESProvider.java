@@ -12,18 +12,17 @@ public class ESProvider {
     private HashMap<String, Boolean> answers = new HashMap<String, Boolean>();
 
     public ESProvider(FactParser factParser, RuleParser ruleParser) {
-        factParser.loadXmlDocument("../../src/main/facts.xml");
-        ruleParser.loadXmlDocument("../../src/main/rules.xml");
         this.factRepository = factParser.getFactRepository();
         this.ruleRepository = ruleParser.getRuleRepository();
     }
 
     public void collectAnswers() {
-        Question question;
         Iterator<Question> questionIterator = ruleRepository.getIterator();
+        int counter = 0;
         while (questionIterator.hasNext()) {
-            question = questionIterator.next();
-            answers.put(question.getId(), getAnswerByQuestion(question.getId()));
+            Question question = questionIterator.next();
+            this.answers.put(question.getId(), answers.get(counter));
+            counter++;
         }
     }
 

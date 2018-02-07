@@ -11,8 +11,7 @@ class RuleParserTest {
 
     @BeforeEach
     void setUp() {
-        parser = new RuleParser();
-        parser.loadXmlDocument("src/main/rules.xml");
+        parser = new RuleParser("./src/main/rules.xml");
     }
 
     @Test
