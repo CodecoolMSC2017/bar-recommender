@@ -12,8 +12,6 @@ public class ESProvider {
     private HashMap<String, Boolean> answers = new HashMap<String, Boolean>();
 
     public ESProvider(FactParser factParser, RuleParser ruleParser) {
-        factParser.loadXmlDocument("./src/main/facts.xml");
-        ruleParser.loadXmlDocument("./src/main/rules.xml");
         this.factRepository = factParser.getFactRepository();
         this.ruleRepository = ruleParser.getRuleRepository();
     }

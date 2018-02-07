@@ -13,6 +13,10 @@ public class FactParser extends XMLParser {
 
     FactRepository repo = new FactRepository();
 
+    public FactParser(String xmlPath) {
+        loadXmlDocument(xmlPath);
+    }
+
     void loadXmlDocument(String xmlPath) {
         DocumentBuilder DBuilder = null;
         Document doc = null;
