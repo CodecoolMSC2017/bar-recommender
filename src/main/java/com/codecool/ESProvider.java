@@ -12,8 +12,8 @@ public class ESProvider {
     private HashMap<String, Boolean> answers = new HashMap<String, Boolean>();
 
     public ESProvider(FactParser factParser, RuleParser ruleParser) {
-        factParser.loadXmlDocument("../../src/main/facts.xml");
-        ruleParser.loadXmlDocument("../../src/main/rules.xml");
+        factParser.loadXmlDocument("src/main/facts.xml");
+        ruleParser.loadXmlDocument("src/main/rules.xml");
         this.factRepository = factParser.getFactRepository();
         this.ruleRepository = ruleParser.getRuleRepository();
     }
@@ -54,7 +54,21 @@ public class ESProvider {
     }
 
     public String evaluate() {
-        return null;
+        HashMap<String, Integer> hasMap = getHashMapResult();
+        String result = "";
+        int max = 0;
+        for (String name : hasMap.keySet()) {
+            if (hasMap.get(name) > max) {
+                max = hasMap.get(name);
+                result = name;
+            }
+        }
+        for (String name : hasMap.keySet()) {
+            if (hasMap.get(name) == max && !(result.contains(name))) {
+                result += ", " + name;
+            }
+        }
+        return result;
     }
 
     public FactRepository getFactRepository() {
@@ -63,5 +77,25 @@ public class ESProvider {
 
     public RuleRepository getRuleRepository() {
         return ruleRepository;
+    }
+
+    private HashMap<String, Integer> getHashMapResult() {
+        HashMap<String, Integer> result = new HashMap<String, Integer>();
+        Iterator<Question> iterator = ruleRepository.getIterator();
+        Iterator<Fact> factIt = factRepository.getIterator();
+        int count = 0;
+         while(factIt.hasNext()) {
+             count = 0;
+             Fact fact = factIt.next();
+             for (String id : answers.keySet()) {
+                if (fact.getValueById(id) == answers.get(id)){
+                    count+=1;
+                }
+            }
+            result.put(fact.getDesription(), count);
+
+
+        }
+           return result;
     }
 }

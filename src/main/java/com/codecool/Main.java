@@ -8,5 +8,6 @@ public class Main {
         ESProvider esProvider = new ESProvider(new FactParser(), new RuleParser());
 
         esProvider.collectAnswers();
+        System.out.println(esProvider.evaluate());
     }
 }
