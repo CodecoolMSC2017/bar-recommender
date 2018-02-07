@@ -34,7 +34,7 @@ class AnswerTest {
             String exception = "asda";
             test.evaluateAnswerByInput(exception);
         } catch (Exception e) {
-            assertEquals(e.getMessage(), "Wrong input");
+            assertEquals("Wrong input", e.getMessage());
         }
     }
 }

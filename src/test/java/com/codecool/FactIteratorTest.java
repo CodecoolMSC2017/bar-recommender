@@ -35,7 +35,9 @@ class FactIteratorTest {
         try{
             testFactIterator.next();
         }
-        catch (IndexOutOfBoundsException e){}
+        catch (Exception e){
+            assertEquals(IndexOutOfBoundsException.class, e.getClass());
+        }
     }
 
     @Test
