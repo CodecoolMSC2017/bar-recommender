@@ -22,8 +22,8 @@
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="shit">
-        <Question>Do you wash your ass after taking a shit?</Question>
+    <Rule id="shoes">
+        <Question>Do you like red shoes?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>
@@ -44,8 +44,30 @@
             </Selection>
         </Answer>
     </Rule>
-    <Rule id="shoes">
-        <Question>Do you like red shoes?</Question>
+    <Rule id="pee">
+        <Question>Do you pee sitting down?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="shit">
+        <Question>Do you wash your ass after taking a shit?</Question>
+        <Answer>
+            <Selection value="true">
+                <SingleValue value="yes"/>
+            </Selection>
+            <Selection value="false">
+                <SingleValue value="no"/>
+            </Selection>
+        </Answer>
+    </Rule>
+    <Rule id="butt">
+        <Question>Do you shave your butthole?</Question>
         <Answer>
             <Selection value="true">
                 <SingleValue value="yes"/>

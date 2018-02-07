@@ -8,6 +8,8 @@
             <shit>true</shit>
             <cat>true</cat>
             <shoes>true</shoes>
+            <pee>true</pee>
+            <butt>true</butt>
         </Evals>
     </Fact>
     <Fact id="kapu">
@@ -18,6 +20,8 @@
             <shit>false</shit>
             <cat>true</cat>
             <shoes>true</shoes>
+            <pee>true</pee>
+            <butt>false</butt>
         </Evals>
     </Fact>
     <Fact id="magnum">
@@ -28,6 +32,56 @@
             <shit>true</shit>
             <cat>false</cat>
             <shoes>true</shoes>
+            <pee>false</pee>
+            <butt>true</butt>
+        </Evals>
+    </Fact>
+    <Fact id="cubana">
+        <Description value="Cubana"/>
+        <Evals>
+            <hair>true</hair>
+            <shirt>true</shirt>
+            <shit>false</shit>
+            <cat>true</cat>
+            <shoes>true</shoes>
+            <pee>false</pee>
+            <butt>true</butt>
+        </Evals>
+    </Fact>
+    <Fact id="eskimo">
+        <Description value="Eskimo"/>
+        <Evals>
+            <hair>false</hair>
+            <shirt>true</shirt>
+            <shit>false</shit>
+            <cat>true</cat>
+            <shoes>false</shoes>
+            <pee>false</pee>
+            <butt>false</butt>
+        </Evals>
+    </Fact>
+    <Fact id="coxx">
+        <Description value="CoXx"/>
+        <Evals>
+            <hair>false</hair>
+            <shirt>false</shirt>
+            <shit>true</shit>
+            <cat>false</cat>
+            <shoes>true</shoes>
+            <pee>true</pee>
+            <butt>true</butt>
+        </Evals>
+    </Fact>
+    <Fact id="kontra">
+        <Description value="Kontra Klub"/>
+        <Evals>
+            <hair>false</hair>
+            <shirt>false</shirt>
+            <shit>true</shit>
+            <cat>true</cat>
+            <shoes>true</shoes>
+            <pee>false</pee>
+            <butt>true</butt>
         </Evals>
     </Fact>
     <Fact id="buza">
@@ -38,6 +92,8 @@
             <shit>false</shit>
             <cat>false</cat>
             <shoes>false</shoes>
+            <pee>false</pee>
+            <butt>false</butt>
         </Evals>
     </Fact>
 </Facts>
