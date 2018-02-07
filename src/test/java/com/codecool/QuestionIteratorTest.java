@@ -35,4 +35,14 @@ class QuestionIteratorTest {
         assertEquals(iterator.next(), question1);
         assertEquals(iterator.next(), question2);
     }
+
+    @Test
+    void nextThrowsException(){
+        try{
+            iterator.next();
+        }
+        catch (Exception e){
+            assertEquals(IndexOutOfBoundsException.class, e.getClass());
+        }
+    }
 }

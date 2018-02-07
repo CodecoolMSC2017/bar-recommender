@@ -31,7 +31,7 @@ class FactIteratorTest {
     }
 
     @Test
-    void nextIsThrowsException(){
+    void nextThrowsException(){
         try{
             testFactIterator.next();
         }
