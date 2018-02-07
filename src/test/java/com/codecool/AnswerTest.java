@@ -17,7 +17,7 @@ class AnswerTest {
             assertTrue(test.evaluateAnswerByInput(yes));
         }
         catch (Exception e){
-            assertEquals(e.getMessage(), "Wrong input");
+            assertEquals("No exception expected, but get one",e.getMessage());
         }
     }
 
@@ -27,13 +27,13 @@ class AnswerTest {
             assertFalse(test.evaluateAnswerByInput(no));
         }
         catch (Exception e){
-            assertEquals(e.getMessage(), "Wrong input");
+            assertEquals("No exception expected, but get one",e.getMessage());
         }
     }
     @Test
     void checkIfAnswerWrong() {
         try {
-            assertTrue(test.evaluateAnswerByInput(exception));
+            test.evaluateAnswerByInput(exception);
         }
         catch (Exception e){
             assertEquals(e.getMessage(), "Wrong input");
