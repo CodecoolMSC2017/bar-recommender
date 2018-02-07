@@ -16,7 +16,7 @@ public class ESProvider {
         this.ruleRepository = ruleParser.getRuleRepository();
     }
 
-    public void collectAnswers(ArrayList<Boolean> answers) {
+    public void collectAnswers() {
         Iterator<Question> questionIterator = ruleRepository.getIterator();
         int counter = 0;
         while (questionIterator.hasNext()) {
