@@ -4,17 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 abstract class Value {
-    List<String> valuesList = new ArrayList<String>();
+    private List<String> valuesList = new ArrayList<String>();
+    private boolean selectionType;
 
-    public Value(List<String> values) {
-        this.valuesList = values;
-    }
 
-    public Value() {
+    public void setSelectionType(boolean selectionType) {
+        this.selectionType = selectionType;
     }
 
     public List<String> getInputPattern() {
         return valuesList;
+    }
+
+
+    public boolean getSelectionType() {
+        return selectionType;
     }
 
 
