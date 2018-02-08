@@ -13,7 +13,7 @@ class QuestionTest {
     void setUp() {
         String id = "newID";
         String question = "isThereID?";
-        answer.addValue(new SingleValue("newValue"));
+        answer.addValue(new SingleValue("newValue", true));
         testQuestion = new Question(id, question, answer);
     }
 

@@ -35,8 +35,8 @@ public class RuleParser extends XMLParser {
         String question;
         Question quest;
         Answer answer = new Answer();
-        answer.addValue(new SingleValue("true"));
-        answer.addValue(new SingleValue("false"));
+        answer.addValue(new SingleValue("true", true));
+        answer.addValue(new SingleValue("false", false ));
         NodeList nodes = doc.getElementsByTagName("Rule");
         for (int i = 0; i < nodes.getLength(); i++) {
             Element element;

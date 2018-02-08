@@ -14,7 +14,7 @@ class SingleValueTest {
 
     @BeforeEach
     void setUp() {
-        testSingleValue = new SingleValue("test");
+        testSingleValue = new SingleValue("test", true);
         localTest = new ArrayList<String>();
         localTest.add("test");
     }
