@@ -23,7 +23,7 @@ class FactRepositoryTest {
 
     @Test
     void testGetIterator() {
-        testFactRepository.addFact(new Fact("id", "description"));
+        testAddFact();
         assertTrue(testFactRepository.getIterator().hasNext());
         assertEquals("description",testFactRepository.getIterator().next().getDesription());
     }
